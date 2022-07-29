@@ -1,4 +1,15 @@
-﻿// 1 определяю сколько строк в массиве хочет ввести пользователь, задаю размер массива 
+﻿//1 
+int count = InputInteger("Укажите количество срок");
+//2
+string[] Array = InputArray(count);
+//3
+Print("Массив: ", Array);
+Console.WriteLine("Строки длиной до трех символов:");
+Print(null,Result(Array));
+Console.ReadKey();
+
+
+// 1 определяю сколько строк в массиве хочет ввести пользователь, задаю размер массива 
 static int InputInteger(string size)
 {
     Console.Write(size+":");
