@@ -19,3 +19,26 @@ Console.WriteLine($"Введите любые значения в {count} стр
         }
     return NewArray;
 }
+
+// 3 вывожу массивы на экран
+static void Print(string size,string[] Array)
+{
+    if(size!=null)
+    Console.WriteLine(size);
+    for (int i = 0; i < Array.Length; i++)
+    {
+        Console.Write($"{Array[i]}" + " ");
+    }
+    Console.WriteLine();
+}
+
+
+// 4 определяю сколько строк содержит до трех символов
+static string[] Result(string[] Array)
+{
+    string NewArray = "";
+    for (int i = 0; i < Array.Length; i++)
+    if (Array[i].Length <= 3) 
+    NewArray +=(NewArray==""?"":"|")+Array[i];
+    return NewArray.Split('|'); 
+}
